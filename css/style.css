@@ -95,7 +95,7 @@
 }
 
 .parallax {
-  background-image: url('../img/Pro Portrait Copy.jpg');
+  background-image: url('img/Pro Portrait Copy.jpg');
   height: 60vh;
    width: 50vw; /* Adjust this to control the width of your "window" */
   margin: 0 auto; /* Centers the "window" horizontally */
