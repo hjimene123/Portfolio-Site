@@ -108,6 +108,10 @@
   object-position: right;
   overflow: hidden;
 }
+
+.mobile-image {
+  display: none; /* Hidden on larger screens */
+}
 /* Apply grayscale effect by default */
 .container .col-xl-4 a img {
    filter: grayscale(100%);  /* Grayscale by default */
@@ -458,14 +462,7 @@ h2 {
 		text-align: left;
 		padding-top: 1rem;
 	}
-	    .parallax {
-    height: 100vh; 
-	background-image: url("../img/Pro Portrait copy.jpg");
-    background-attachment: scroll; 
-    background-position: center; 
-    background-size: cover; 
-    background-repeat: no-repeat;
-  }
+
 }
 
 
@@ -575,9 +572,19 @@ h2 {
 }
 
 @media (max-width: 767px) {
-	.parallax {
-    background-attachment: fixed;
-	}
+		    .parallax {
+    background-image: none; /* Remove background image on mobile */
+        height: auto; /* Allow height to adjust to content */
+        width: 100%; /* Full width on mobile */
+        margin-left: 0; /* Reset margin */
+    }
+  
+  .mobile-image {
+    display: block;
+    width: 100%;
+    height: auto; 
+	max-width: 100%;
+  }
 	.footer {
 		font-size: 1.4em;
 		line-height: 180%;
