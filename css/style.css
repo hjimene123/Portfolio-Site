@@ -449,7 +449,7 @@ h2 {
 		opacity: 1;
 		position: relative;
 		width: 100%;
-		background-color: #ebeae9;
+		background-color: #fff;
 		color: black;
 	}
 	.reveal p {
@@ -459,12 +459,12 @@ h2 {
 		padding-top: 1rem;
 	}
 	    .parallax {
-    height: 40vh; 
+    height: 100vh; 
+	background-image: url("../img/Pro Portrait copy.jpg");
     background-attachment: scroll; 
-    background-position: left; 
+    background-position: center; 
     background-size: cover; 
-    margin-left: 0; 
-    object-position: left; 
+    background-repeat: no-repeat;
   }
 }
 
