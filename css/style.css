@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+
+.photo-right { 
+  width: 300px;
+  height: 300px; 
+  overflow: hidden; 
+}
+
+.photo-right img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  object-position: top;
+}
+
+
+/* Basic */
+
+.pushright{
+	padding-left: 170px;
+}
+
+.pushrightgd{
+	padding-left: 85px;
+}
+
+.signature-container {
+  position: relative;
+  width: 200px; /* Set the width of the container */
+  height: 150px; /* Set the height of the container */
+  overflow: hidden;
+  margin: 20px auto; /* Center the container and add space */
+  z-index: 1; /* Ensure it sits above other elements */
+  background-color: transparent;
+}
+
+#signature-static{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make both the video and image fill the container */
+  height: 30%; /* Maintain consistent height */
+  object-fit: cover; /* Ensures the content scales properly */
+}
+
+#signature-animation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make both the video and image fill the container */
+  height: 30%; /* Maintain consistent height */
+  object-fit: cover; /* Ensures the content scales properly */
+  display: block;
+  z-index: 2; /* Ensure video is on top initially */
+  border-color: #fff;
+  border-width: 20px;
+  object-position: center center; /* Center the video */
+}
+
+#signature-static {
+  display: none; /* Hidden until video finishes */
+  z-index: 1;
+}
+
+
+
+/* Container for the Graphic Designs */
+.photo-container {
+  display: flex;              /* Use flexbox for layout */
+  align-items: center;        /* Center items vertically */
+  width: 100%;                /* Make it full width */
+  padding: 0px;              /* Optional padding around the container */
+  flex-wrap: wrap;            /* Allow wrapping to the next row */
+}
+
+/* Each photo item */
+.photo-item {
+  width: 24%;                 /* Each photo will take 1/4 of the container width */
+  aspect-ratio: 1;            /* Maintain square aspect ratio */
+  overflow: hidden;           /* Hide any overflow */
+  margin-bottom: 0px;        /* Optional margin for spacing between rows */
+}
+
+/* Make images fit their container */
+.photo-item img {
+  width: 100%;                /* Make the image take up the full width of the container */
+  height: 100%;               /* Make the image take up the full height of the container */
+  object-fit: cover;          /* Cover the container while maintaining aspect ratio */
+}
+
+
+.Black{
+	background-color: black !important;
+}
+
+.parallax {
+  background-image: url('../img/Pro Portrait Copy.jpg');
+  height: 60vh;
+   width: 50vw; /* Adjust this to control the width of your "window" */
+  margin: 0 auto; /* Centers the "window" horizontally */
+  margin-left: 31vw; /* Offset from the left margin */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+  object-position: right;
+  overflow: hidden;
+}
+/* Apply grayscale effect by default */
+.container .col-xl-4 a img {
+   filter: grayscale(100%);  /* Grayscale by default */
+   transition: filter 0.3s ease, transform 0.3s ease;  /* Smooth transition for filter and transform */
+}
+
+/* When hovering over the image */
+.container .col-xl-4 a:hover img {
+   filter: grayscale(0%);  /* Remove grayscale */
+   transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Optional: Adding some hover effects to the image thumbnails */
+.container .col-xl-4 a {
+   display: block;  /* Make sure the anchor is a block element for proper hover effect */
+}
+
+body {
+	background-color: white;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+	border-radius: 0;
+}
+
+a:link,
+a:hover,
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:link .white,
+a:hover .white,
+a:visited .white {
+	text-decoration: none;
+	color: #fff;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+
+h2 {
+	line-height: 110%;
+	font-size: 2.2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+
+
+.cursive {
+	font-family: 'Reenie Beanie', cursive;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+
+/* Spacing */
+
+.no-gutter {
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+
+/* Navbar */
+
+.navigation {
+	padding-top: 1rem;
+}
+
+.navigation.container-fluid {
+	position: absolute;
+}
+
+.navbar {
+	width: 100%;
+	z-index: 99;
+	top: 15px;
+	padding: 0;
+}
+
+.navbar-brand {
+	padding-left: 0px;
+	width: 200px;
+	height: 100px;
+}
+
+.navbar-brand:link,
+.navbar-brand:hover,
+.navbar-brand:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.container a {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+	font-size: 20px;
+	overflow: hidden;
+	top: 5px;
+}
+
+.container a:after {
+	content: '';
+	position: absolute;
+	background: #000;
+	height: 2px;
+	width: 0%;
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: 0;
+	transition: .35s ease;
+}
+
+.container a:hover:after,
+.container a:focus:after,
+.container a:active:after {
+	width: 100%;
+}
+
+.button_container {
+	position: absolute;
+	top: 15px;
+	right: 0px;
+	height: 27px;
+	width: 27px;
+	cursor: pointer;
+	z-index: 100;
+	transition: opacity .25s ease;
+}
+
+.button_container.active {
+	position: fixed;
+	top: 46px;
+	right: 8.8rem;
+}
+
+@media (max-width: 767px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	.button_container.active {
+		right: 15px;
+	}
+}
+
+.button_container.active .top {
+	transform: translateY(9px) translateX(0) rotate(45deg);
+	background: #FFF;
+}
+
+.button_container.active .middle {
+	opacity: 0;
+	background: #FFF;
+}
+
+.button_container.active .bottom {
+	transform: translateY(-7px) translateX(0) rotate(-45deg);
+	background: #FFF;
+}
+
+.button_container span {
+	background: #fff;
+	border: none;
+	height: 2px;
+	width: 27px;
+	position: absolute;
+	transition: all .35s ease;
+	cursor: pointer;
+}
+
+.button_container .black {
+	background: #000;
+}
+
+.button_container span:nth-of-type(2) {
+	top: 8.3px;
+}
+
+.button_container span:nth-of-type(3) {
+	top: 16px;
+}
+
+.overlay {
+	position: fixed;
+	background: #000;
+	z-index: 98;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .35s, visibility .35s, height .35s;
+	overflow: hidden;
+}
+
+.overlay.open {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}
+
+.overlay.open li {
+	animation: fadeInRight .5s ease forwards;
+	animation-delay: .35s;
+}
+
+.overlay.open li:nth-of-type(2) {
+	animation-delay: .4s;
+}
+
+.overlay.open li:nth-of-type(3) {
+	animation-delay: .45s;
+}
+
+.overlay.open li:nth-of-type(4) {
+	animation-delay: .50s;
+}
+
+.overlay nav {
+	position: relative;
+	height: 70%;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	height: 100%;
+}
+
+.overlay ul li {
+	display: block;
+	height: 25%;
+	height: calc(100% / 4);
+	min-height: 50px;
+	position: relative;
+	opacity: 0;
+}
+
+.overlay ul li a {
+	display: block;
+	position: relative;
+	color: #FFF;
+	text-decoration: none;
+	overflow: hidden;
+	transition: all .2s ease-in-out;
+}
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+	width: 100%;
+}
+
+.overlay ul li a:hover {
+	transform: scale(1.5);
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		left: 20%;
+	}
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+
+
+
+
+
+
+/* Portfolio */
+
+.portfolio-text {
+	padding-top: 12rem;
+	font-size: 1.5rem;
+	line-height: 125%;
+}
+
+.bg-black {
+	background-color: #000!important;
+}
+
+
+@media (max-width: 991px) {
+	.card-columns {
+		column-count: 1;
+	}
+}
+
+@media (min-width: 992px) {
+	.card-columns {
+		column-count: 2;
+	}
+}
+
+@media (min-width: 1200px) {
+	.card-columns {
+		column-count: 3;
+	}
+}
+
+
+
+@media (max-width: 767px) {
+	.card-hover .reveal,
+	.card-hover:hover .reveal {
+		visibility: visible;
+		opacity: 1;
+		position: relative;
+		width: 100%;
+		background-color: #ebeae9;
+		color: black;
+	}
+	.reveal p {
+		line-height: 125%;
+		font-size: 1.2rem;
+		text-align: left;
+		padding-top: 1rem;
+	}
+}
+
+
+
+
+/* Products */
+
+.products {
+	font-size: 1.2em;
+	line-height: 125%;
+	padding-top: 5rem;
+}
+
+.products-2 {
+	padding-top: 10rem;
+	padding-bottom: 6rem;
+	font-size: 1.5em;
+	line-height: 125%;
+}
+
+
+/* Additional */
+
+.additional img {
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.additional .col-xl-4 {
+	padding-right: 0px;
+	padding-left: 0px;
+	max-width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.container.additional {
+	min-width: 100%;
+}
+
+
+
+
+/* Stories */
+
+.stories {
+	font-size: 1.2em;
+	text-align: center;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.stories-2-title {
+	font-size: 2.5rem;
+	font-family: 'Reenie Beanie', cursive;
+}
+
+.stories-2 {
+	font-size: 1.5em;
+	background-color: #000;
+	color: #fff;
+	padding-top: 15rem;
+	padding-bottom: 10rem;
+}
+
+.graphic{
+	font-size: 1.5em;
+	color: #fff;
+	padding-top: 15rem;
+	padding-bottom: 10rem;
+}
+
+/* Events */
+
+.events {
+	font-size: 1.2em;
+	background-color: #000;
+	color: #fff;
+}
+
+.events h2 {
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+
+/* Contact */
+
+.contact {
+	font-size: 1.5em;
+	background-color: #000;
+	color: #fff;
+	padding-top: 15rem;
+	padding-bottom: 10rem;
+}
+
+
+/* Footer */
+
+.footer {
+	font-size: 1.2em;
+	color: #000;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+
+@media (max-width: 767px) {
+	.footer {
+		font-size: 1.4em;
+		line-height: 180%;
+	}
+	 .photo-item {
+    width: 100%;             /* Each photo will take the full width on mobile */
+    margin-bottom: 15px;     /* Reduce space between photos for better mobile experience */
+		 padding-right: 80px;
+  }
+}
+
+.footer a:link,
+.footer a:hover,
+.footer a:visited {
+	text-decoration: none;
+	color: #000;
+}
