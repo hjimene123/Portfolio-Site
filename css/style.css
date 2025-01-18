@@ -458,10 +458,14 @@ h2 {
 		text-align: left;
 		padding-top: 1rem;
 	}
-	   .parallax {
-        height: 40vh; /* Reduce height on mobile */
-        background-attachment: scroll; /* Disable fixed attachment for mobile */
-    }
+	    .parallax {
+    height: 40vh; 
+    background-attachment: scroll; 
+    background-position: left; 
+    background-size: cover; 
+    margin-left: 0; 
+    object-position: left; 
+  }
 }
 
 
