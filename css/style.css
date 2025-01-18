@@ -107,6 +107,7 @@
   will-change: transform;
   object-position: right;
   overflow: hidden;
+  background-attachment: scroll;  /* Fallback for mobile */
 }
 /* Apply grayscale effect by default */
 .container .col-xl-4 a img {
@@ -567,6 +568,9 @@ h2 {
 }
 
 @media (max-width: 767px) {
+	.parallax {
+    background-attachment: fixed;
+	}
 	.footer {
 		font-size: 1.4em;
 		line-height: 180%;
