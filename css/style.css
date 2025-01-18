@@ -100,14 +100,13 @@
    width: 50vw; /* Adjust this to control the width of your "window" */
   margin: 0 auto; /* Centers the "window" horizontally */
   margin-left: 31vw; /* Offset from the left margin */
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   will-change: transform;
   object-position: right;
   overflow: hidden;
-  background-attachment: scroll;  /* Fallback for mobile */
 }
 /* Apply grayscale effect by default */
 .container .col-xl-4 a img {
