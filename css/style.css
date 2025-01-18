@@ -100,6 +100,7 @@
    width: 50vw; /* Adjust this to control the width of your "window" */
   margin: 0 auto; /* Centers the "window" horizontally */
   margin-left: 31vw; /* Offset from the left margin */
+  backface-visibility: hidden; /* Reduces flickering */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,6 +108,9 @@
   will-change: transform;
   object-position: right;
   overflow: hidden;
+	
+   -webkit-overflow-scrolling: touch;
+	
 }
 
 .mobile-image {
@@ -135,6 +139,7 @@ body {
 
 html {
 	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
 }
 
 .btn {
