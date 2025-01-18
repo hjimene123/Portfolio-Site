@@ -257,7 +257,10 @@
          new WOW().init();
       </script>
       <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
-	  <script>
+	  
+	  
+	   <!-- Lazy Load-->
+	   <script>
   document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll(".lazyload");
     const observer = new IntersectionObserver((entries, observer) => {
@@ -274,7 +277,7 @@
     lazyImages.forEach((img) => observer.observe(img));
   });
 </script>
-
+    <!--End Lazy Load-->
 
       <!-- End Javascript -->
    </body>
