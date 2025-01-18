@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+   <head>
+      <!-- Meta -->
+      <title>About</title>
+      <meta charset="UTF-8">
+       <meta name="Hector Jimenez Portfoilo" content="Portfolio">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Styles -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+      <link href="vendor/animate/animate.css" rel="stylesheet" type="text/css"/>
+      <link href="css/style.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <div class="navigation container-fluid">
+         <div class="row justify-content-md-center ">
+            <div class="col-md-10 col-sm-12">
+               <nav class="navbar navbar-default">
+					<a class="navbar-brand" href="index.html">
+					  <div class="signature-container">
+						<video id="signature-animation" autoplay playsinline muted>
+						  <source src="img/Signature2.mp4" type="video/mp4">
+						  Your browser does not support the video tag.
+						</video>
+						<img id="signature-static" src="img/logo-black.png" alt="Static Signature">
+					  </div>
+					</a>
+
+                  <div class="button_container" id="toggle">
+                     <span class="black top"></span>
+                     <span class="black middle"></span>
+                     <span class="black bottom"></span>
+                  </div>
+                  <div class="overlay" id="overlay">
+                     <nav class="overlay-menu">
+                        <ul>
+                           <li> <a href="index.html">About</a></li>
+                           <li> <a href="portfolio.html">Portfolio</a></li>
+                           <li> <a href="contact.html">Contact</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <!-- End Navbar -->
+      <!-- Products -->
+      <div class="container-fluid products-2">
+         <div class="row justify-content-md-center ">
+            <div class="col-md-10 col-sm-12">
+               <div class="row">
+                  <div class="col-xl-8 col-md-10 col-sm-12">
+                     <p> I'm a senior studying Web Development &amp; Design at Purdue University, where I blend technical skills with creative design thinking. I aspire to create digital experiences that make an impact. 
+                        <br><br>
+                        While I'm experienced in working with HTML, CSS, JavaScript, PHP and design tools including the Adobe Creative Suite, I'm always learning new technologies and frameworks. I thrive in collaborative environments and am looking forward to joining a team where I can contribute to meaningful projects while continuing to grow as a developer. This site draws inspiration from Scandinavian design, though I enjoy exploring and experimenting with other design concepts.
+
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- End Products -->
+      <!-- Additional -->
+    
+         <div class="parallax">
+      </div>
+      <!-- End Additional -->
+      <!-- Footer -->
+      <div class="container-fluid footer ">
+         <div class="row">
+            <div class="col-xl-2 col-md-8 offset-md-1 col-sm-12 ">
+               <p>
+                  <a href="index.html">About</a><br>
+                  <a href="portfolio.html">Portfolio</a><br>
+                  <a href="contact.html">Contact</a><br>
+               </p>
+            </div>
+         
+            <div class="col-xl-2 col-md-8 offset-md-1 col-sm-12">
+               <p>
+                  HECTOR JIMENEZ<br>
+                  WEST LAFAYETTE, IN 47906<br>
+                  hjimene987@gmail.com<br>
+                  TEL. (973) 558-2655
+               </p>
+            </div>
+         </div>
+      </div>
+      <!-- End Footer -->
+      <!-- Javascript -->
+      <script src="vendor/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="vendor/wow/wow.js"></script>
+      <script src="js/script.js"></script>
+      <script>
+         new WOW().init();
+      </script>
+	  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("signature-animation");
+    const staticImage = document.getElementById("signature-static");
+
+    // When the video ends, hide it and show the static image
+    video.addEventListener("ended", function () {
+      video.style.display = "none";
+      staticImage.style.display = "block";
+    });
+  });
+     </script>
+
+
+      <!-- End Javascript -->
+   </body>
+</html>
