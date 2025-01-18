@@ -100,7 +100,7 @@
    width: 50vw; /* Adjust this to control the width of your "window" */
   margin: 0 auto; /* Centers the "window" horizontally */
   margin-left: 31vw; /* Offset from the left margin */
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -458,6 +458,10 @@ h2 {
 		text-align: left;
 		padding-top: 1rem;
 	}
+	   .parallax {
+        height: 40vh; /* Reduce height on mobile */
+        background-attachment: scroll; /* Disable fixed attachment for mobile */
+    }
 }
 
 
