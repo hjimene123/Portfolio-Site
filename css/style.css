@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
 
+.pb-5 {
+    margin-bottom: auto; /* Ensures consistent spacing at the bottom */
+}
 
 .photo-right { 
   width: 300px;
