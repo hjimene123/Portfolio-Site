@@ -54,7 +54,7 @@
                   <div class="col-xl-8 col-md-10 col-sm-12">
                      <p> Hello, my name is Hector. I'm a senior studying Web Development &amp; Design at Purdue University, where I enjoy combining my technical abilities with creative design to craft meaningful digital experiences. My goal is to make a positive impact through my work.
                         <br><br>
-                       I am proficient in HTML, CSS, JavaScript, PHP, and design software like the Adobe Creative Suite. At the moment, I am expanding my skill set learning front-end and back-end frameworks, specifically ReactJS and ASP.NET. I thrive in collaborative environments and am looking forward to joining a team where I can contribute to meaningful projects while continuing to grow as a developer.
+                       I am proficient in HTML, CSS, JavaScript, PHP, and Adobe Creative Suite. At the moment, I am expanding my skill set learning front-end and back-end frameworks, specifically ReactJS and ASP.NET. I thrive in collaborative environments and am looking forward to joining a team where I can contribute to meaningful projects while continuing to grow as a developer.
 
                      </p>
                   </div>
@@ -64,10 +64,17 @@
       </div>
       <!-- End Products -->
       <!-- Additional -->
-    
-         <div class="parallax">
-			 <img src="img/Pro Portrait copy.jpg" alt="Parallax Image" class="mobile-image">
-      </div>
+
+	   
+	   <div class="parallax-container">
+    <div class="parallax-content" id="parallax-image">
+        <img src="img/Pro Portrait copy.jpg" alt="Parallax Image" class="desktop-image">
+    </div>
+    <img src="img/Pro Portrait copy.jpg" alt="Parallax Image" class="mobile-image">
+</div>
+
+	   
+
       <!-- End Additional -->
       <!-- Footer -->
       <div class="container-fluid footer ">
@@ -100,6 +107,43 @@
          new WOW().init();
       </script>
 	   
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const parallaxImage = document.getElementById('parallax-image');
+    let lastScrollPosition = window.pageYOffset;
+    let ticking = false;
+
+    // Initial position
+    updateParallax();
+
+    // Smooth parallax effect on scroll
+    window.addEventListener('scroll', function() {
+        lastScrollPosition = window.pageYOffset;
+
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateParallax();
+                ticking = false;
+            });
+
+            ticking = true;
+        }
+    });
+
+    function updateParallax() {
+        const scrolled = lastScrollPosition;
+        // Limit the range of movement
+        const translateY = Math.min(Math.max(-20 + (scrolled * 0.08), -20), 80);
+        
+        parallaxImage.style.transform = `translate(-50%, ${translateY}%)`;
+    }
+
+    // Handle resize events
+    window.addEventListener('resize', function() {
+        updateParallax();
+    });
+});
+</script>
 	   
 	   
 	  <script>
